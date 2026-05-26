@@ -1,0 +1,22 @@
+{
+  "name": "rest-nest-next",
+  "version": "0.0.1",
+  "description": "",
+  "author": "MishaNavrotsky",
+  "private": false,
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev:db": "docker compose -f docker-compose.dev.yml up -d",
+    "db:prepare": "cd backend && npm run db:generate && npm run db:migrate",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:backend:test": "cd backend && npm run test",
+    "frontend:gen-api": "cd frontend && npm run generate-api",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "dependencies": {
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "@types/morgan": "^1.9.10"
+  }
+}
